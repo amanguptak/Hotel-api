@@ -27,6 +27,6 @@ router.put("/:id", verifyUser,updateUser);
 router.delete("/:id",verifyUser, deleteUser);
 
 router.get("/:id",verifyUser, getUser);
-router.get("/",verifyAdmin, getUsers);
+router.get("/", getUsers);
 
 export default router;
