@@ -9,7 +9,7 @@ import {
 } from "../controllers/user.js";
 import {verifyToken,verifyUser,verifyAdmin} from "../utils/verifyToken.js"
 
-// const router = express.Router();
+const router = express.Router();
 // router.get("/checkAuthentication", verifyToken,(req, res, next) => {
 //     res.send("hello user You are now logged in")
 // })
