@@ -7,6 +7,7 @@ import hotelsRoute from "./routes/hotel.js"
 import roomsRoute from "./routes/rooms.js"
 import usersRoute from "./routes/users.js"
 import cookieParser from 'cookie-parser';
+import cors from 'cors'; // Import cors
 // for express server we need to write .js if we are using file with import
 const app = express()
 dotenv.config()
@@ -26,7 +27,7 @@ mongoose.connection.on('connected',()=>{
 })
 
 //middleware
-
+app.use(cors()); 
 app.use(cookieParser())//use as function cookieParser
 app.use(bodyParser.json())
 app.use("/api/auth",authRoute)
