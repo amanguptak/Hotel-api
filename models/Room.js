@@ -13,15 +13,24 @@ const RoomSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  roomNumbers: [{ number: Number, unavilableDates: { type: [Date] } }],
-
+  roomNumbers: [{
+    number: {
+      type: Number,
+      required: true,
+    },
+    unavailableDates: {
+      type: [Date],
+      default: [],
+    },
+  }],
   desc: {
     type: String,
     required: true,
-  }
- 
-},
-{ timestamps: true }
-);
+  },
+  imageUrl: {
+    type: String,
+    required: true,
+  },
+}, { timestamps: true });
 
 export default mongoose.model("Room", RoomSchema);

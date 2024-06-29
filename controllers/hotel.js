@@ -1,4 +1,5 @@
 import Hotel from "../models/Hotel.js";
+import Room from "../models/Room.js"; 
 
 //importnat note the sequence of req,res,next should be same
 
