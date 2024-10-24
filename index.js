@@ -27,7 +27,7 @@ mongoose.connection.on('connected',()=>{
 })
 
 //middleware
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(cookieParser())//use as function cookieParser
 app.use(bodyParser.json())
 app.use("/api/auth",authRoute)
